@@ -2,3 +2,6 @@ functional programming was introduced in java-8 which allows
 methods to be independent. This independent methods are called functions.
 Functional programming allows these functions to run the block of code 
 without associated with any class.
+
+Lambdas - They are blocks of code used to implement the method defined by the 
+functional interface (An interface with only one method). 

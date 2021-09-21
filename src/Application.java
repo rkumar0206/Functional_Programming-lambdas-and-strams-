@@ -37,6 +37,8 @@ public class Application {
 			System.out.println("Custom object is walking... using lambdas");
 		};
 
+		ablockOfCode.someMethod();
+		
 	}
 
 	public static void walker(Walkable walkable) {
