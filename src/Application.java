@@ -3,9 +3,17 @@ public class Application {
 
 	public static void main(String[] args) {
 
+		// using the class instance
+
+		Human human = new Human();
+		walker(human);
+
+		Robot robot = new Robot();
+		walker(robot);
+
 		// using as anonymous class
 
-		// here we don't need the class name here
+		// here we don't need the class instance
 		walker(new Walkable() {
 
 			@Override
