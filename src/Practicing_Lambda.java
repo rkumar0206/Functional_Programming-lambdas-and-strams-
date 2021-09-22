@@ -21,9 +21,54 @@ public class Practicing_Lambda {
 		
 		System.out.println(divide.compute(55, 11));
 		
+		
+		MyGenericInterface<String> reverseString = (s) -> {
+			
+			String result = "";
+			
+			for (int i = s.length() - 1; i >= 0 ; i--) {
+				
+				result += s.charAt(i);
+			}
+			
+			return result;
+		};
+		
+		System.out.println(reverseString.work("Rohit"));
+		
+		
+		MyGenericInterface<Integer> factorial = (num) -> {
+			
+			int fact = 1;
+			
+			for (int i =1 ; i<= num ; i++) {
+				
+				fact *= i;
+			}
+			
+			return fact;
+		};
+		
+		
+		System.out.println(factorial.work(5));
+		
+		
+	}
+	
+	@FunctionalInterface
+	interface Calculate {
+		
+		public int compute(int arg1, int arg2);
+	}
+	
+	@FunctionalInterface
+	interface MyGenericInterface<T> {
+		
+		public T work(T t); 
 	}
 
-	// convert this function to lamda
+
+	// convert this function to lambda
 	public void sayHell() {
 
 		System.out.println("hello there");
@@ -47,10 +92,31 @@ public class Practicing_Lambda {
 		return arg1 / arg2;
 	}
 	
-	@FunctionalInterface
-	interface Calculate {
+	// convert this to lambda
+	public String reverse(String s) {
 		
-		public int compute(int arg1, int arg2);
+		String result = "";
+		
+		for (int i = s.length() - 1; i >= 0 ; i--) {
+			
+			result += s.charAt(i);
+		}
+		
+		return result;
+		
+	}
+	
+	// convert this to lambda
+	public int factorial(int num) {
+		
+		int fact = 1;
+		
+		for (int i =1 ; i<= num ; i++) {
+			
+			fact *= i;
+		}
+		
+		return fact;
 	}
 
 }
